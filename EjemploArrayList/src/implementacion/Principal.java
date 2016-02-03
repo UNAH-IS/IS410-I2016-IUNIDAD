@@ -48,7 +48,7 @@ public class Principal {
 					break;
 				case 1:
 					System.out.println("Agregar");
-					computadoras.add(ingresarRegistro(null));
+					computadoras.add(ingresarRegistro(new Computadora()));
 					break;
 				case 2:
 					System.out.println("Modificar");
@@ -69,24 +69,37 @@ public class Principal {
 		}while(opcion!=0);
 	}
 	
-	public Computadora ingresarRegistro(Computadora computadora){
-		//Ingresar informacion
-		Computadora c;
-		if (computadora == null)
-			c = new Computadora();
-		else 
-			c = computadora;
-		
-		c.setMarca(JOptionPane.showInputDialog("Marca"));
-		c.setModelo(JOptionPane.showInputDialog("Modelo"));
-		c.setColor(JOptionPane.showInputDialog("Color"));
-		c.setCapacidadDiscoBytes(Integer.valueOf(JOptionPane.showInputDialog("Capacidad de disco en Bytes")));
-		c.setCapacidadMemoriaBytes(Integer.valueOf(JOptionPane.showInputDialog("Capacidad de memoria en Bytes")));
+	public Computadora ingresarRegistro(Computadora c){
+		//Modificar: c tiene valores
+		//Agregar: c es un objeto vacio
+		c.setMarca(JOptionPane.showInputDialog("Marca", c.getMarca()));
+		c.setModelo(JOptionPane.showInputDialog("Modelo", c.getModelo()));
+		c.setColor(JOptionPane.showInputDialog("Color", c.getColor()));
+		c.setCapacidadDiscoBytes(Integer.valueOf(JOptionPane.showInputDialog("Capacidad de disco en Bytes", c.getCapacidadDiscoBytes())));
+		c.setCapacidadMemoriaBytes(Integer.valueOf(JOptionPane.showInputDialog("Capacidad de memoria en Bytes", c.getCapacidadMemoriaBytes())));
 		return c;
 	}
 	
 	public void eliminarRegistro(){
+		//Solicitar el indice a eliminar
+		int indice = Integer.valueOf(
+				JOptionPane.showInputDialog(
+						"Que indice desea eliminar? (0 al "+(computadoras.size()-1)+")")
+		);
+		//Consultar si quiere eliminarlo
+		//Si: 0
+		//No: 1
+		//Cancelar: 2
 		
+		int respuesta = JOptionPane.showConfirmDialog(
+				null, 
+				"Desea eliminar el registro con el indice " + indice
+			);
+		if (respuesta == 0){
+			computadoras.remove(indice);
+			JOptionPane.showMessageDialog(null, "Registro eliminado");
+		}
+		//Eliminar el elemento
 	}
 	
 	public void modificarRegistro(){
