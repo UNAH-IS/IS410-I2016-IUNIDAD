@@ -3,7 +3,7 @@ package clases;
 public class Alumno extends PersonaUniversitaria{
 	private String cuenta;
 	
-	public Alumno(String nombre, 
+	/*public Alumno(String nombre, 
 			String apellido, 
 			String genero,
 			int edad, 
@@ -12,10 +12,19 @@ public class Alumno extends PersonaUniversitaria{
 			String cuenta){
 		super(nombre, apellido, genero, edad, carrera, identidad);
 		this.cuenta = cuenta;
-	}
+	}*/
+	
+	
 	
 	public Alumno(){}
 	
+	public Alumno(String nombre, String apellido, String genero, int edad,
+			String carrera, String identidad, String cuenta) {
+		super(nombre, apellido, genero, edad, carrera, identidad);
+		this.cuenta = cuenta;
+	}
+
+
 	public void estudiar(){}
 
 	public String getCuenta() {
@@ -33,8 +42,4 @@ public class Alumno extends PersonaUniversitaria{
 				+ edad + ", carrera=" + carrera + ", identidad=" + identidad
 				+ "]";
 	}
-
-	
-	
-	
 }
