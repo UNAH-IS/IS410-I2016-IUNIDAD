@@ -3,65 +3,66 @@ package implementacion;
 import java.util.ArrayList;
 
 import clases.Alumno;
+import clases.Carrera;
 import clases.Maestro;
 import clases.PersonaUniversitaria;
 
 public class Principal {
 	private ArrayList<PersonaUniversitaria> personas;
-	
+	private PersonaUniversitaria p;
 	public Principal(){
 		personas = new ArrayList<PersonaUniversitaria>();
+		p = new Alumno();
+		//objetoTipoPadre = new ClaseHija();
 		
-		PersonaUniversitaria p = 
-				new PersonaUniversitaria(
-					"Juan","Perez","M",20,
-					"Ing. Sistemas","102265656");
+		Carrera carrera = 
+				new Carrera(115,"Ingenieria en sistemas",54, 5, "Eduardo Gross");
 		
 		Alumno a = new Alumno(
 				"Juan","Perez","M",20,
-				"Ing. Sistemas","102265656",
+				new Carrera(115,"Ingenieria en sistemas",54, 5, "Eduardo Gross"),"102265656",
 				"199821321"
 		);
 		
 		Alumno a1 = new Alumno(
 				"Luis","Mendez","M",20,
-				"Ing. Sistemas","102265656",
+				carrera,"102265656",
 				"199821321"
 		);
 		
 		Alumno a2 = new Alumno(
 				"Maria","Rodriguez","F",20,
-				"Ing. Sistemas","102265656",
+				carrera,"102265656",
 				"199821321"
 		);
 		
 		Alumno a3 = new Alumno(
 				"Mario","Lopez","M",20,
-				"Ing. Sistemas","102265656",
+				carrera,"102265656",
 				"199821321"
 		);
 		
 		Maestro m = new Maestro(
 				"Pedro","Rodriguez","M",50,
-				"Ing. Sistemas","4554665",
+				carrera,"4554665",
 				"4654654",3456.66
 		);
 		
 		Maestro m1 = new Maestro(
 				"Matusalen","Lainez","M",50,
-				"Ing. Sistemas","4554665",
+				carrera,"4554665",
 				"4654654",3456.66
 		);
 		
 		Maestro m2 = new Maestro(
 				"Rodrigo","Rodriguez","M",50,
-				"Ing. Sistemas","4554665",
+				carrera,"4554665",
 				"4654654",3456.66
 		);
 		
 		Maestro m3 = new Maestro(
 				"Jose","Gomez","M",50,
-				"Ing. Sistemas","4554665",
+				carrera,"4554665",
 				"4654654",3456.66
 		);
 		
@@ -84,6 +85,8 @@ public class Principal {
 		mostrarAlumnos();
 		mostrarMaestros();
 		
+		for (int i = 0; i<personas.size();i++)
+			personas.get(i).matricular();
 	}
 	
 	public void mostrarAlumnos(){

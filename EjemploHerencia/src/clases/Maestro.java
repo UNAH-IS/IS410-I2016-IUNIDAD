@@ -5,7 +5,7 @@ public class Maestro extends PersonaUniversitaria {
 	private double salario;
 	
 	public Maestro(String nombre, String apellido, String genero, int edad,
-			String carrera, String identidad, String numeroEmpleado,
+			Carrera carrera, String identidad, String numeroEmpleado,
 			double salario) {
 		super(nombre, apellido, genero, edad, carrera, identidad);
 		this.numeroEmpleado = numeroEmpleado;
@@ -32,5 +32,10 @@ public class Maestro extends PersonaUniversitaria {
 	public String toString() {
 		return super.toString() + "Maestro [numeroEmpleado=" + numeroEmpleado + ", salario="
 				+ salario + "]";
+	}
+	
+	@Override
+	public void matricular(){
+		System.out.println("Matricular Maestro");
 	}
 }

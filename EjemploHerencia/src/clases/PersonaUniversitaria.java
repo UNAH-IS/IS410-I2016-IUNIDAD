@@ -1,11 +1,14 @@
 package clases;
 
-public class PersonaUniversitaria {
+import java.util.ArrayList;
+
+public abstract class PersonaUniversitaria {
 	protected String nombre;
 	protected String apellido;
 	protected String genero;
 	protected int edad;
-	protected String carrera;
+	protected Carrera carrera; //Composicion
+	protected ArrayList<Carrera> carreras; //Colecciones
 	protected String identidad;
 	
 	
@@ -13,7 +16,7 @@ public class PersonaUniversitaria {
 			String apellido, 
 			String genero,
 			int edad, 
-			String carrera, 
+			Carrera carrera, 
 			String identidad) {
 		this.nombre = nombre;
 		this.apellido = apellido;
@@ -25,7 +28,8 @@ public class PersonaUniversitaria {
 	
 	public PersonaUniversitaria(){}
 	
-	public void matricular(){}
+	public abstract void matricular();
+		
 	public void aprobar(){}
 	public void reprobrar(){}
 	public void mostrarInformacion(){}
@@ -62,11 +66,11 @@ public class PersonaUniversitaria {
 		this.edad = edad;
 	}
 
-	public String getCarrera() {
+	public Carrera getCarrera() {
 		return carrera;
 	}
 
-	public void setCarrera(String carrera) {
+	public void setCarrera(Carrera carrera) {
 		this.carrera = carrera;
 	}
 
