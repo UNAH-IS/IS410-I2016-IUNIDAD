@@ -5,8 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="429.0" prefWidth="396.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.ControladorCitas">
+<AnchorPane prefHeight="429.0" prefWidth="396.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControladorCitas">
    <children>
       <GridPane layoutX="9.0" layoutY="14.0" prefHeight="215.0" prefWidth="370.0">
         <columnConstraints>
@@ -28,19 +27,19 @@
             <Label text="Fecha:" GridPane.rowIndex="4" />
             <ComboBox fx:id="cboPacientes" prefHeight="25.0" prefWidth="204.0" GridPane.columnIndex="1" />
             <ComboBox fx:id="cboMedicos" prefHeight="25.0" prefWidth="203.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <ComboBox prefHeight="25.0" prefWidth="202.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ComboBox fx:id="cboEnfermeras" prefHeight="25.0" prefWidth="202.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <ListView fx:id="lstMedicamentos" prefHeight="85.0" prefWidth="288.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <DatePicker fx:id="dtpckrFechaCita" GridPane.columnIndex="1" GridPane.rowIndex="4" />
          </children>
       </GridPane>
       <HBox layoutX="5.0" layoutY="242.0" prefHeight="32.0" prefWidth="386.0" spacing="5.0">
          <children>
-            <Button mnemonicParsing="false" text="Guardar" />
+            <Button mnemonicParsing="false" onAction="#guardarRegistro" text="Guardar" />
             <Button mnemonicParsing="false" text="Actualizar" />
             <Button mnemonicParsing="false" text="Eliminar" />
-            <Button mnemonicParsing="false" text="Limpiar" />
+            <Button mnemonicParsing="false" onAction="#limpiar" text="Limpiar" />
          </children>
       </HBox>
-      <ListView layoutX="7.0" layoutY="274.0" prefHeight="145.0" prefWidth="380.0" />
+      <ListView fx:id="lstCitas" layoutX="7.0" layoutY="274.0" prefHeight="145.0" prefWidth="380.0" />
    </children>
 </AnchorPane>

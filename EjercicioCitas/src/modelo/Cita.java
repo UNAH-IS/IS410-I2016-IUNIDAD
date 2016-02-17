@@ -3,14 +3,16 @@ package modelo;
 import java.sql.Date;
 import java.util.ArrayList;
 
+import javafx.collections.ObservableList;
+
 public class Cita {
 	private Paciente paciente;
 	private Medico medico;
 	private Enfermera enfermera;
-	private ArrayList<Medicamento> medicamentos;
+	private ObservableList<Medicamento> medicamentos;
 	private Date fechaCita;
 	public Cita(Paciente paciente, Medico medico, Enfermera enfermera,
-			ArrayList<Medicamento> medicamentos, Date fechaCita) {
+			ObservableList<Medicamento> medicamentos, Date fechaCita) {
 		super();
 		this.paciente = paciente;
 		this.medico = medico;
@@ -36,10 +38,10 @@ public class Cita {
 	public void setEnfermera(Enfermera enfermera) {
 		this.enfermera = enfermera;
 	}
-	public ArrayList<Medicamento> getMedicamentos() {
+	public ObservableList<Medicamento> getMedicamentos() {
 		return medicamentos;
 	}
-	public void setMedicamentos(ArrayList<Medicamento> medicamentos) {
+	public void setMedicamentos(ObservableList<Medicamento> medicamentos) {
 		this.medicamentos = medicamentos;
 	}
 	public Date getFechaCita() {

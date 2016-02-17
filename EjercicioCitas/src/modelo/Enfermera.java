@@ -23,9 +23,6 @@ public class Enfermera extends Persona {
 	}
 	@Override
 	public String toString() {
-		return "Enfermera [codigoColegiacion=" + codigoColegiacion
-				+ ", examenes=" + examenes + ", nombre=" + nombre
-				+ ", apellido=" + apellido + ", edad=" + edad + ", genero="
-				+ genero + "]";
-	}	
+		return nombre + " " + apellido;
+	}	 
 }
