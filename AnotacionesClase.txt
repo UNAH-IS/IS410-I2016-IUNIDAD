@@ -82,6 +82,7 @@ Se les conoce como clases abstractas puras. Es una estructura de datos similar a
 
 Caracteristicas:
 -Se utiliza la palabra reservada interface en vez de class.
+-Se utilizan para simular la herencia multiple, es posible tener varias interfaces como padres.
 -Todos sus metodos son abstractos y publicos
 -Todos sus atributos deben ser public static final
 -No se puede instanciar
