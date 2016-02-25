@@ -5,7 +5,6 @@ public class Pago {
 	private String monto;
 	private String moneda;
 	private String numero_cuota;
-	private Prestamo prestamos;
 
 	public Pago(){}
 
@@ -14,7 +13,6 @@ public class Pago {
 		this.monto = monto;
 		this.moneda = moneda;
 		this.numero_cuota = numero_cuota;
-		this.prestamos = prestamos;
 	}
 
 	public String getFecha_pago() {
@@ -49,17 +47,9 @@ public class Pago {
 		this.numero_cuota = numero_cuota;
 	}
 
-	public Prestamo getPrestamos() {
-		return prestamos;
-	}
-
-	public void setPrestamos(Prestamo prestamos) {
-		this.prestamos = prestamos;
-	}
-
 	@Override
 	public String toString() {
-		return  fecha_pago + ", " + prestamos + ", cuota " + numero_cuota + ", cantidad: "+ monto +" " + moneda ;
+		return  fecha_pago + ", " + ", cuota " + numero_cuota + ", cantidad: "+ monto +" " + moneda ;
 	}
 
 

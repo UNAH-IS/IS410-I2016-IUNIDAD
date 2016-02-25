@@ -46,7 +46,7 @@ public class ControladorVistaPagosPrestamo implements Initializable{
 		gestionEventos();		
 		llenarInformacion();
 		pagos = FXCollections.observableArrayList();
-		lstPagos.setItems(pagos);
+		//lstPagos.setItems(pagos);
 			/*Para agregar el evento del listview (Cuando el usuario selecciona un registro) descomente el codigo
 			 * que se muestra a continuacion y sustituya los datos correspondientes para nombreListView y TipoDato*/
 
@@ -63,7 +63,7 @@ public class ControladorVistaPagosPrestamo implements Initializable{
 					Pago valorAnterior, 
 					Pago valorSeleccionado) {
 				if(valorSeleccionado!=null){
-					cboPrestamos.getSelectionModel().select(valorSeleccionado.getPrestamos());
+					//cboPrestamos.getSelectionModel().select(valorSeleccionado.getPrestamos());
 					txtFechaPago.setText(valorSeleccionado.getFecha_pago());
 					
 					//txtMoneda.setText(valorSeleccionado.getMoneda());
@@ -99,7 +99,8 @@ public class ControladorVistaPagosPrestamo implements Initializable{
 								"22/22/2222",444,213),
 				new Agente("Pedro","Lainez","54354354",
 						"M","22/22/2222",45646,15132),
-				new Sucursal("Sucursal 1","Col Kennedy", "424654")
+				new Sucursal("Sucursal 1","Col Kennedy", "424654"),
+				FXCollections.observableArrayList()
 		);
 		prestamos.add(p1);
 	}

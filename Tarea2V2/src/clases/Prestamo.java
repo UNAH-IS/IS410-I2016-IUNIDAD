@@ -13,14 +13,18 @@ public class Prestamo {
 
 	public Prestamo(){}
 
-	public Prestamo(String codigo_prestamo,Prestatario prestatario, Aval aval1, Aval aval2, Agente agente, Sucursal sucursal) {
+	public Prestamo(String codigo_prestamo,
+			Prestatario prestatario, 
+			Aval aval1, Aval aval2, 
+			Agente agente, Sucursal sucursal,
+			ObservableList<Pago> pagos) {
 		this.codigo_prestamo= codigo_prestamo;
 		this.prestatario = prestatario;
 		this.aval1 = aval1;
 		this.aval2 = aval2;
 		this.agente = agente;
 		this.sucursal = sucursal;
-
+		this.pagos = pagos;
 	}
 
 	private String getCodigo_prestamo() {
@@ -74,6 +78,14 @@ public class Prestamo {
 	@Override
 	public String toString() {
 		return  codigo_prestamo + " - " +  prestatario ;
+	}
+
+	public ObservableList<Pago> getPagos() {
+		return pagos;
+	}
+
+	public void setPagos(ObservableList<Pago> pagos) {
+		this.pagos = pagos;
 	}
 
 
