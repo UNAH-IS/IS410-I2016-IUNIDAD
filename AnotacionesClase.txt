@@ -31,12 +31,13 @@ Pilares de la POO
 *Herencia
 	Es una funcionalidad que ofrecen los lenguajes orientados a objetos que permiten la reutilización de codigo. Permite crear nuevas clases a partir de otras ya existentes, obteniendo caracteristicas y acciones similares a las ya definidas previamente.
 
-	No existe herencia multiple utilizando clases.
-	Se puede llamar al constructor de la clase padre utilizando super()
-	Se puede llamar a cualquier atributo o metodo de la clase padre utilizando super.atributo y super.metodo()
-	Obligatoriamente un constructor en un clase hija debe llamar al constructor de la clase padre, se puede omitir este llamado si la clase padre tiene un constructor vacio.
-	Toda clase en Java hereda de la clase Object, el metodo toString es un ejemplo de uno de los metodos de esta clase.
-	Los atributos de una clase padre usualmente se les asigna el modificador de acceso protected, para que puedan ser accedidos desde las clases hija.
+	Caracteristicas
+	*No existe herencia multiple utilizando clases.
+	*Se puede llamar al constructor de la clase padre utilizando super()
+	*Se puede llamar a cualquier atributo o metodo de la clase padre utilizando super.atributo y super.metodo()
+	*Obligatoriamente un constructor en un clase hija debe llamar al constructor de la clase padre, se puede omitir este llamado si la clase padre tiene un constructor vacio.
+	*Toda clase en Java hereda de la clase Object, el metodo toString es un ejemplo de uno de los metodos de esta clase.
+	*Los atributos de una clase padre usualmente se les asigna el modificador de acceso protected, para que puedan ser accedidos desde las clases hija.
 
 
 	Operador instanceof: es un operador logico(retorna verdadero o falso) se utiliza para saber si un objeto es una instancia de cierto tipo.
@@ -61,7 +62,7 @@ Escalabilidad: permite que los cambios, adecuaciones, mejoras o correcciones en 
 
 
 Clases abstractas
-Son clases que usualmente se definen Compatibilidad	o patron o molde para clases hijas, tienen las siguientes caracteristicas:
+Son clases que usualmente definen un patron o molde para clases hijas, tienen las siguientes caracteristicas:
 
 -Se utiliza el modificador abstract para definir una clase abstracta.
 -Una clase abstracta puede tener o no metodos abstractos.
