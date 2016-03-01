@@ -4,16 +4,13 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
-import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
+import javafx.scene.control.Label;
 
 public class ControladorPrincipal implements Initializable{
 	private Main main;
+	
+	@FXML private Label lblMensajePrincipal;
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
@@ -35,5 +32,9 @@ public class ControladorPrincipal implements Initializable{
 
 	public void setMain(Main main) {
 		this.main = main;
+	}
+	
+	public void definirMensaje(String mensaje){
+		lblMensajePrincipal.setText(mensaje);
 	}
 }

@@ -49,7 +49,15 @@ Pilares de la POO
 *Polimorfismo: Se refiere a la propiedad por la que es posible enviar mensajes(ejemplo: ejecutar metodos) sintacticamente iguales a objetos de tipos distintos.
 
 	-Sobreescritura de metodos: es volver a escribir un metodo en una clase hija que previamente estaba definido en su clase padre, de tal forma que puede redefinir las instrucciones o acciones a ejecutar.
-	-Compatibilidad de clases: Tratar a clases hijas como que fueran del mismo tipo de la clase padre (por ejemplo: agregar objetos de clases hijas en un ArrayList con Rawtype de una clase padre).
+	-Compatibilidad de clases: Tratar a clases hijas como que fueran del mismo tipo de la clase padre,
+		Por ejemplo:
+		*Agregar objetos de clases hijas en un ArrayList con Rawtype de una clase padre.
+		*Enviar como parametro en un metodo un objeto de una clase hija cuando en la definicion el parametro es de una clase padre.
+		*Crear una instancia de una clase padre utilizando el constructor de una clase hija.
+			ClasePadre c = new ClaseHija();
+		*Hacer cast o conversion de tipos de una clase padre a una clase hija.
+			ClaseHija c = (ClaseHija)objetoClasePadre;
+
 	-Sobrecarga de metodos.
 
 
@@ -66,11 +74,11 @@ Son clases que usualmente definen un patron o molde para clases hijas, tienen la
 
 -Se utiliza el modificador abstract para definir una clase abstracta.
 -Una clase abstracta puede tener o no metodos abstractos.
+-Un metodo abstracto no tiene cuerpo, unicamente se declara.
 -Si una clase tiene un metodo abstracto obligatoriamente la clase debe ser abstracta.
 -No se puede instanciar.
 -Si pueden llevar constructores.
 -Si se define un metodo abstracto este debe ser sobreescrito obligatoriamente en las clases hijas.
--Un metodo abstracto no tiene cuerpo, unicamente se declara.
 -Usualmente se utiliza en clases padre.
 
 
